@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to My Technical Blog"
-date: 2025-10-19 14:00:00 -0400
+date: 2025-10-19 10:00:00 -0400
 categories: [meta, introduction]
 tags: [welcome, about]
 ---
