@@ -32,7 +32,8 @@
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about' | relative_url }}">About</a>
-        <a href="https://github.com/{{ site.github_username_redhat | default: 'jbyrdrh' }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/{{ site.github_username_redhat | default: 'jbyrdrh' }}" target="_blank" rel="noopener">GitHub (RH)</a>
+        <a href="https://github.com/{{ site.github_username | default: 'thebyrdman-git' }}" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
@@ -69,12 +70,12 @@
         </div>
 
         <div class="footer-col">
-          <h3>Topics</h3>
+          <h3>Connect</h3>
           <ul style="list-style: none; margin: 0; padding: 0;">
-            <li><a href="{{ '/' | relative_url }}">Red Hat Technologies</a></li>
-            <li><a href="{{ '/' | relative_url }}">Ansible Automation</a></li>
-            <li><a href="{{ '/' | relative_url }}">Infrastructure</a></li>
-            <li><a href="{{ '/' | relative_url }}">System Administration</a></li>
+            <li><a href="https://github.com/{{ site.github_username_redhat | default: 'jbyrdrh' }}" target="_blank" rel="noopener">GitHub (Red Hat)</a></li>
+            <li><a href="https://github.com/{{ site.github_username | default: 'thebyrdman-git' }}" target="_blank" rel="noopener">GitHub (Personal)</a></li>
+            <li><a href="https://jbyrd.org" target="_blank">Website</a></li>
+            <li><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></li>
           </ul>
         </div>
       </div>
