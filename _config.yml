@@ -1,6 +1,6 @@
 # Site settings
-title: "Technical Blog"
-description: "Red Hat TAM | Infrastructure Automation | System Administration"
+title: "jbyrd's blog"
+description: "Red Hat TAM | Ansible Best Practices | Infrastructure Automation | System Administration"
 author: "Jimmy Byrd"
 email: "jbyrd@redhat.com"
 baseurl: ""
