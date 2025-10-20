@@ -4,6 +4,12 @@ title: About
 permalink: /about/
 ---
 
+<div style="text-align: center; margin-bottom: 2rem;">
+  <img src="{{ '/assets/images/jimmy.jpeg' | relative_url }}" 
+       alt="Jimmy Byrd" 
+       style="border-radius: 8px; max-width: 300px; width: 100%; height: auto; border: 3px solid #EE0000; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+
 <div class="rh-brand-badge">Red Hat TAM</div>
 
 I'm **Jimmy Byrd**, a Red Hat Technical Account Manager (TAM) specializing in enterprise infrastructure, automation, and system administration.
