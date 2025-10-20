@@ -68,7 +68,8 @@ This blog occasionally covers these projects as they relate to Red Hat technolog
 
 ## Connect With Me
 
-- **GitHub**: [thebyrdman-git](https://github.com/thebyrdman-git)
+- **GitHub (Red Hat)**: [@jbyrdrh](https://github.com/jbyrdrh) - Ansible, RHEL system roles, enterprise automation
+- **GitHub (Personal)**: [@thebyrdman-git](https://github.com/thebyrdman-git) - Personal projects and blog
 - **Email**: [jbyrd@redhat.com](mailto:jbyrd@redhat.com)
 - **Website**: [jbyrd.org](https://jbyrd.org)
 

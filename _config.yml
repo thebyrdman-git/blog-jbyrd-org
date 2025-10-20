@@ -6,6 +6,7 @@ email: "jbyrd@redhat.com"
 baseurl: ""
 url: "https://blog.jbyrd.org"
 github_username: "thebyrdman-git"
+github_username_redhat: "jbyrdrh"
 linkedin_username: "jimmybyrd"
 
 # Build settings

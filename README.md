@@ -184,7 +184,8 @@ Technical blog by **Jimmy Byrd** - Red Hat Technical Account Manager specializin
 
 - 📝 **Blog**: <https://blog.jbyrd.org>
 - 🏠 **Website**: <https://jbyrd.org>
-- 💻 **GitHub**: [thebyrdman-git](https://github.com/thebyrdman-git)
+- 💻 **GitHub (Red Hat)**: [@jbyrdrh](https://github.com/jbyrdrh)
+- 💻 **GitHub (Personal)**: [@thebyrdman-git](https://github.com/thebyrdman-git)
 - 📧 **Email**: jbyrd@redhat.com
 
 ---
