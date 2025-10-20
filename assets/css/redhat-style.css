@@ -1,0 +1,444 @@
+/* Red Hat Official Blog Styling */
+/* Based on Red Hat's Design System and Brand Standards */
+
+/* Import Red Hat Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&family=Red+Hat+Text:wght@400;500;700&display=swap');
+
+:root {
+  /* Red Hat Official Color Palette */
+  --rh-red: #EE0000;
+  --rh-dark-red: #A30000;
+  --rh-black: #151515;
+  --rh-gray-dark: #3C3F42;
+  --rh-gray: #6A6E73;
+  --rh-gray-light: #D2D2D2;
+  --rh-gray-lighter: #F5F5F5;
+  --rh-white: #FFFFFF;
+  
+  /* Typography */
+  --font-heading: 'Red Hat Display', sans-serif;
+  --font-body: 'Red Hat Text', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+}
+
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--rh-black);
+  background-color: var(--rh-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.site-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Header Styling */
+.site-header {
+  background-color: var(--rh-black);
+  border-bottom: 3px solid var(--rh-red);
+  padding: var(--spacing-md) 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--rh-white);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  transition: color 0.2s ease;
+}
+
+.site-title:hover {
+  color: var(--rh-red);
+}
+
+.site-description {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--rh-gray-light);
+  margin-top: var(--spacing-xs);
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.site-nav a {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--rh-white);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background-color: var(--rh-red);
+  color: var(--rh-white);
+}
+
+/* Main Content */
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xxl) var(--spacing-md);
+  min-height: calc(100vh - 300px);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--rh-black);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--rh-red);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--rh-gray-light);
+  padding-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-xl);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--rh-gray-dark);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--rh-red);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--rh-dark-red);
+  text-decoration: underline;
+}
+
+/* Post List */
+.post-list {
+  list-style: none;
+  margin: var(--spacing-xl) 0;
+}
+
+.post-list-item {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--rh-gray-lighter);
+  border-left: 4px solid var(--rh-red);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.post-list-item:hover {
+  background: var(--rh-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+}
+
+.post-meta {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--rh-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.post-link {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--rh-black);
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.post-link:hover {
+  color: var(--rh-red);
+}
+
+.post-excerpt {
+  color: var(--rh-gray-dark);
+  line-height: 1.6;
+}
+
+/* Post Content */
+.post-header {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 3px solid var(--rh-red);
+}
+
+.post-title {
+  font-size: 2.75rem;
+  color: var(--rh-black);
+  margin-bottom: var(--spacing-sm);
+}
+
+.post-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: var(--spacing-lg) 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Code Blocks */
+code {
+  font-family: 'Monaco', 'Courier New', monospace;
+  background-color: var(--rh-gray-lighter);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: var(--rh-dark-red);
+}
+
+pre {
+  background-color: var(--rh-black);
+  color: var(--rh-white);
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+  border-left: 4px solid var(--rh-red);
+}
+
+pre code {
+  background-color: transparent;
+  color: var(--rh-white);
+  padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--rh-red);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  font-style: italic;
+  color: var(--rh-gray-dark);
+  background-color: var(--rh-gray-lighter);
+  padding: var(--spacing-md);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.7;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--rh-black);
+  color: var(--rh-white);
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-xxl);
+  border-top: 3px solid var(--rh-red);
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--rh-red);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-col-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.footer-col {
+  color: var(--rh-gray-light);
+}
+
+.footer-col a {
+  color: var(--rh-white);
+}
+
+.footer-col a:hover {
+  color: var(--rh-red);
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Red Hat Brand Badge */
+.rh-brand-badge {
+  display: inline-block;
+  background-color: var(--rh-red);
+  color: var(--rh-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Buttons */
+.button, .btn {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--rh-red);
+  color: var(--rh-white);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.button:hover, .btn:hover {
+  background-color: var(--rh-dark-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-header .wrapper {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .site-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .site-nav a {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  .footer-col-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accessibility */
+:focus {
+  outline: 2px solid var(--rh-red);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .site-header,
+  .site-nav,
+  .site-footer {
+    display: none;
+  }
+  
+  body {
+    color: black;
+    background: white;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div style="max-width: 900px; margin: 0 auto;">
+    
+    <!-- Page Title -->
+    {%- if page.title -%}
+      <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+
+    <!-- Page Content -->
+    {{ content }}
+
+    <!-- Posts List -->
+    {%- if site.posts.size > 0 -%}
+      <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Latest Posts</h2>
+      <ul class="post-list">
+        {%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
+        {%- for post in site.posts -%}
+          <li class="post-list-item">
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+            {%- if post.excerpt -%}
+              <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      <!-- RSS Feed -->
+      <p style="text-align: center; margin-top: 2rem;">
+        <a href="{{ '/feed.xml' | relative_url }}" class="button">
+          Subscribe via RSS
+        </a>
+      </p>
+    {%- endif -%}
+
+  </div>
+</div>
+

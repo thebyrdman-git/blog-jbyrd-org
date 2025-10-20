@@ -4,29 +4,76 @@ title: About
 permalink: /about/
 ---
 
-# About Me
+<div class="rh-brand-badge">Red Hat TAM</div>
 
-I'm Jimmy Byrd, a Red Hat Technical Account Manager (TAM) with a passion for infrastructure automation and system administration.
+I'm **Jimmy Byrd**, a Red Hat Technical Account Manager (TAM) specializing in enterprise infrastructure, automation, and system administration.
 
-## What I Do
+## Areas of Expertise
 
-- **Red Hat TAM**: Supporting enterprise customers with RHEL, Ansible Automation Platform, and OpenShift
-- **Infrastructure Automation**: Building and maintaining automated infrastructure with Ansible
-- **Home Lab**: Running MiracleMax - a production-grade home lab with monitoring, automation, and more
-- **PAI Development**: Creating Personal AI Infrastructure tools for productivity
+### Ansible Automation Platform
+- Ansible Automation Platform 2.x deployment and architecture
+- Workflow automation and best practices  
+- Event-Driven Ansible implementation
+- Ansible development and content creation
 
-## Technical Focus Areas
+### Red Hat Enterprise Linux
+- RHEL 7, 8, and 9 administration
+- System performance tuning and optimization
+- Security hardening and compliance
+- Migration and upgrade strategies
 
-- Ansible Automation Platform 2.6
-- Red Hat Enterprise Linux
+### Infrastructure & Cloud
+- OpenShift Container Platform
+- Hybrid cloud architecture
 - Infrastructure as Code (IaC)
-- GitOps workflows
-- Container orchestration
-- Monitoring & observability (Prometheus, Grafana)
+- GitOps and CI/CD pipelines
 
-## Connect
+## What I Do as a TAM
 
-- GitHub: [@thebyrdman-git](https://github.com/thebyrdman-git)
-- Main site: [jbyrd.org](https://jbyrd.org)
+As a Technical Account Manager at Red Hat, I work directly with enterprise customers to:
 
-This blog represents my personal views and experiences, not those of my employer.
+- **Strategic Guidance**: Provide architectural recommendations and best practices
+- **Technical Enablement**: Train and mentor customer teams on Red Hat technologies
+- **Proactive Support**: Monitor customer environments and prevent issues before they occur
+- **Product Advocacy**: Bridge the gap between customers and Red Hat product teams
+
+## About This Blog
+
+This blog is my platform for sharing knowledge gained from:
+
+- Working with enterprise customers on complex technical challenges
+- Building and maintaining personal infrastructure (MiracleMax home lab)
+- Developing automation tools and frameworks
+- Exploring new Red Hat technologies and open source projects
+
+### What You'll Find Here
+
+- **Technical Deep-Dives**: In-depth explorations of Red Hat products and features
+- **Automation Patterns**: Practical Ansible playbooks, roles, and best practices
+- **Infrastructure Guides**: Real-world infrastructure design and implementation
+- **Problem Solving**: Solutions to challenging technical problems
+- **Personal Projects**: Home lab experiments and personal AI infrastructure
+
+## Personal AI Infrastructure (PAI)
+
+I've built a comprehensive Personal AI Infrastructure system called **PAI** that includes:
+
+- Automated case management and RFE tracking
+- AI-powered customer engagement tools
+- Infrastructure automation with Ansible
+- Smart home integration with Home Assistant
+- Personal finance automation with Actual Budget
+
+This blog occasionally covers these projects as they relate to Red Hat technologies and automation principles.
+
+## Connect With Me
+
+- **GitHub**: [thebyrdman-git](https://github.com/thebyrdman-git)
+- **Email**: [jbyrd@redhat.com](mailto:jbyrd@redhat.com)
+- **Website**: [jbyrd.org](https://jbyrd.org)
+
+---
+
+<div style="background: #F5F5F5; padding: 1.5rem; border-left: 4px solid #EE0000; border-radius: 4px; margin-top: 2rem;">
+<strong>Disclaimer:</strong> The views and opinions expressed in this blog are my own and do not necessarily reflect the official policy or position of Red Hat, Inc. All technical examples and recommendations are provided for educational purposes.
+</div>

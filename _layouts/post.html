@@ -1,0 +1,124 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div style="max-width: 800px; margin: 0 auto;">
+    
+    <!-- Post Header -->
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        {%- if page.modified_date -%}
+          ~ 
+          <time datetime="{{ page.modified_date | date_to_xmlschema }}" itemprop="dateModified">
+            Updated: {{ page.modified_date | date: date_format }}
+          </time>
+        {%- endif -%}
+        {%- if page.author -%}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">{{ page.author }}</span>
+            </span>
+        {%- endif -%}
+      </p>
+
+      <!-- Categories and Tags -->
+      {%- if page.categories.size > 0 or page.tags.size > 0 -%}
+        <div style="margin-top: 1rem;">
+          {%- if page.categories.size > 0 -%}
+            <span style="margin-right: 1rem;">
+              <strong>Categories:</strong>
+              {%- for category in page.categories -%}
+                <span class="rh-brand-badge" style="margin-left: 0.5rem;">{{ category }}</span>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+          
+          {%- if page.tags.size > 0 -%}
+            <span>
+              <strong>Tags:</strong>
+              {%- for tag in page.tags -%}
+                <span style="background: #F5F5F5; padding: 0.25rem 0.5rem; border-radius: 3px; margin-left: 0.5rem; font-size: 0.875rem;">
+                  {{ tag }}
+                </span>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </header>
+
+    <!-- Post Content -->
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <!-- Share Links -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #D2D2D2; text-align: center;">
+      <h3>Share This Post</h3>
+      <div style="margin-top: 1rem;">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" 
+           class="button" 
+           target="_blank" 
+           rel="noopener"
+           style="margin: 0.5rem;">
+          Share on Twitter
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" 
+           class="button" 
+           target="_blank" 
+           rel="noopener"
+           style="margin: 0.5rem;">
+          Share on LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- Author Bio -->
+    {%- if site.author -%}
+      <div style="margin-top: 3rem; padding: 1.5rem; background: #F5F5F5; border-left: 4px solid #EE0000; border-radius: 4px;">
+        <h3 style="margin-top: 0;">About the Author</h3>
+        <p>
+          <strong>{{ site.author }}</strong> is a Red Hat Technical Account Manager (TAM) specializing in 
+          Ansible Automation Platform, RHEL, and enterprise infrastructure. 
+        </p>
+        {%- if site.email -%}
+          <p style="margin-bottom: 0;">
+            Contact: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <!-- Navigation to Other Posts -->
+    {%- if site.posts.size > 1 -%}
+      <nav style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #D2D2D2;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          {%- if page.previous.url -%}
+            <div>
+              <p style="margin-bottom: 0.5rem; color: #6A6E73; text-transform: uppercase; font-size: 0.875rem;">← Previous Post</p>
+              <a href="{{ page.previous.url | relative_url }}" style="font-family: 'Red Hat Display', sans-serif; font-weight: 700; font-size: 1.125rem;">
+                {{ page.previous.title | escape }}
+              </a>
+            </div>
+          {%- endif -%}
+          
+          {%- if page.next.url -%}
+            <div style="text-align: right;">
+              <p style="margin-bottom: 0.5rem; color: #6A6E73; text-transform: uppercase; font-size: 0.875rem;">Next Post →</p>
+              <a href="{{ page.next.url | relative_url }}" style="font-family: 'Red Hat Display', sans-serif; font-weight: 700; font-size: 1.125rem;">
+                {{ page.next.title | escape }}
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      </nav>
+    {%- endif -%}
+
+  </div>
+</article>
+

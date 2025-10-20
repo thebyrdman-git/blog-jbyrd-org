@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {%- seo -%}
+  
+  <!-- Red Hat Custom Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/redhat-style.css' | relative_url }}">
+  
+  <!-- Red Hat Favicon (optional - can be added later) -->
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+  
+  {%- feed_meta -%}
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <div>
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          <span class="rh-brand-badge">Red Hat</span>
+          {{ site.title | escape }}
+        </a>
+        {%- if site.description -%}
+          <p class="site-description">{{ site.description | escape }}</p>
+        {%- endif -%}
+      </div>
+      
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about' | relative_url }}">About</a>
+        <a href="https://github.com/{{ site.github_username | default: 'thebyrdman-git' }}" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-content" aria-label="Content">
+    {{ content }}
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="contact-list">
+            {%- if site.author -%}
+              <li class="p-name">{{ site.author | escape }}</li>
+            {%- endif -%}
+            {%- if site.email -%}
+              <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {%- endif -%}
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>About This Blog</h3>
+          <p>{{ site.description | escape }}</p>
+          <p style="margin-top: 1rem;">
+            <small>Built with Jekyll • Styled with Red Hat Design System</small>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Topics</h3>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li><a href="{{ '/' | relative_url }}">Red Hat Technologies</a></li>
+            <li><a href="{{ '/' | relative_url }}">Ansible Automation</a></li>
+            <li><a href="{{ '/' | relative_url }}">Infrastructure</a></li>
+            <li><a href="{{ '/' | relative_url }}">System Administration</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #3C3F42;">
+        <p>
+          &copy; {{ 'now' | date: "%Y" }} {{ site.author | escape }}. 
+          Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> and 
+          <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.
+        </p>
+        <p style="margin-top: 0.5rem;">
+          <small>Red Hat and the Red Hat logo are trademarks of Red Hat, Inc., registered in the United States and other countries.</small>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

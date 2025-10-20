@@ -1,18 +1,28 @@
 # Site settings
-title: "jbyrd's technical blog"
+title: "Technical Blog"
 description: "Red Hat TAM | Infrastructure Automation | System Administration"
 author: "Jimmy Byrd"
-email: "your-email@example.com"
+email: "jbyrd@redhat.com"
 baseurl: ""
 url: "https://blog.jbyrd.org"
+github_username: "thebyrdman-git"
+linkedin_username: "jimmybyrd"
 
 # Build settings
 markdown: kramdown
-theme: minima
+# Using custom Red Hat-styled layouts instead of theme
+# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# SEO Settings
+social:
+  name: Jimmy Byrd
+  links:
+    - https://github.com/thebyrdman-git
+    - https://blog.jbyrd.org
 
 # Permalink structure
 permalink: /:year/:month/:day/:title/
